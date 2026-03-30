@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THE ROYAL COURT Admin | Catalog New Acquisition</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "secondary-fixed": "#d0e8dd",
+                  "tertiary": "#3a2800",
+                  "primary-fixed-dim": "#94d4b0",
+                  "on-secondary": "#ffffff",
+                  "surface-variant": "#e3e2e1",
+                  "on-tertiary-fixed-variant": "#5d4201",
+                  "on-error": "#ffffff",
+                  "surface-tint": "#2a6a4c",
+                  "surface-container-high": "#e9e8e7",
+                  "secondary-container": "#cde5da",
+                  "secondary-fixed-dim": "#b4ccc1",
+                  "primary-container": "#004b30",
+                  "on-background": "#1a1c1c",
+                  "surface-container-highest": "#e3e2e1",
+                  "on-error-container": "#93000a",
+                  "on-secondary-fixed": "#0a1f19",
+                  "background": "#faf9f8",
+                  "error": "#ba1a1a",
+                  "tertiary-fixed-dim": "#e9c176",
+                  "surface-bright": "#faf9f8",
+                  "on-surface": "#1a1c1c",
+                  "on-primary-fixed": "#002113",
+                  "on-tertiary-container": "#cea860",
+                  "surface-container-low": "#f4f3f2",
+                  "primary": "#00321f",
+                  "inverse-primary": "#94d4b0",
+                  "outline-variant": "#bfc9c1",
+                  "surface": "#faf9f8",
+                  "surface-dim": "#dadad9",
+                  "tertiary-container": "#563d00",
+                  "inverse-on-surface": "#f1f0f0",
+                  "tertiary-fixed": "#ffdea5",
+                  "on-secondary-fixed-variant": "#364b43",
+                  "on-secondary-container": "#51675f",
+                  "primary-fixed": "#aff1cb",
+                  "on-primary-fixed-variant": "#0b5136",
+                  "on-tertiary": "#ffffff",
+                  "on-surface-variant": "#404943",
+                  "surface-container": "#eeeeed",
+                  "secondary": "#4d635b",
+                  "surface-container-lowest": "#ffffff",
+                  "on-tertiary-fixed": "#261900",
+                  "on-primary-container": "#7bba97",
+                  "on-primary": "#ffffff",
+                  "inverse-surface": "#2f3130",
+                  "outline": "#707972",
+                  "error-container": "#ffdad6"
+                },
+                fontFamily: {
+                  "headline": ["Noto Serif"],
+                  "body": ["Manrope"],
+                  "label": ["Manrope"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+        </script>
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+                font-size: 20px;
+            }
+            .nav-item-active {
+                background-color: #004b30;
+                color: #ffffff;
+            }
+            .glass-panel {
+                background: rgba(250, 249, 248, 0.6);
+                backdrop-filter: blur(20px);
+            }
+            input:focus, select:focus, textarea:focus {
+                outline: none !important;
+                border-bottom-color: #e9c176 !important;
+                box-shadow: none !important;
+            }
+            .professional-logo {
+                font-family: 'Noto Serif', serif;
+                background: linear-gradient(to right, #e9c176, #cea860);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                text-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+        </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="flex min-h-screen">
+    <!-- SideNavBar -->
+    <aside class="w-64 bg-surface-container-lowest border-r border-outline-variant/10 flex flex-col sticky top-0 h-screen">
+        <div class="p-8">
+            <h1 class="font-headline text-primary text-xl font-bold leading-tight">Admin Portal</h1>
+            <p class="font-label text-on-surface-variant text-[10px] tracking-[0.2em] uppercase mt-1">Owner: Om Pawar</p>
+        </div>
+        <nav class="mt-4 flex-1 px-4 space-y-2">
+            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" href="users.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium text-sm">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-lg nav-item-active shadow-lg shadow-primary/10 transition-colors" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+                <span class="font-medium text-sm">Inventory</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" href="users.html">
+                <span class="material-symbols-outlined">group</span>
+                <span class="font-medium text-sm">User Data</span>
+            </a>
+            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="font-medium text-sm">Settings</span>
+            </a>
+        </nav>
+        <div class="p-8 border-t border-outline-variant/10">
+            <div class="bg-primary-container p-4 rounded-xl flex items-center gap-3">
+                <div class="h-2 w-2 rounded-full bg-primary-fixed animate-pulse"></div>
+                <span class="text-[10px] font-label tracking-widest text-on-primary-container uppercase">System Secured</span>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col">
+        <!-- TopNavBar -->
+        <header class="h-20 bg-surface-container-lowest/80 backdrop-blur-md sticky top-0 z-10 px-10 flex items-center justify-between border-b border-outline-variant/5">
+            <div class="flex items-center gap-2">
+                <span class="professional-logo text-2xl font-bold tracking-[0.2em]">THE ROYAL COURT</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-on-surface-variant hover:text-primary transition-colors relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-0 right-0 h-1.5 w-1.5 bg-tertiary-fixed-dim rounded-full"></span>
+                </button>
+                <button class="text-on-surface-variant hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">help</span>
+                </button>
+                <button onclick="openProfileModal()" class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant/20 hover:ring-2 hover:ring-tertiary-fixed-dim transition-all">
+                    <img alt="Admin Profile" class="h-full w-full object-cover" src="admin-profile.jpg"/>
+                </button>
+            </div>
+        </header>
+        <!-- Scrollable Body -->
+        <div class="p-12 max-w-6xl mx-auto w-full">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs font-label uppercase tracking-widest text-on-surface-variant mb-6">
+                <a class="hover:text-primary transition-colors" href="home.html">Dashboard</a>
+                <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+                <a class="hover:text-primary transition-colors" href="shop.html">Inventory</a>
+                <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+                <span class="text-primary font-bold">Add New Piece</span>
+            </nav>
+            <!-- Page Title -->
+            <div class="mb-12">
+                <h2 class="font-headline text-5xl text-primary mb-2">Catalog New Acquisition</h2>
+                <p class="text-on-surface-variant/70 italic font-headline">Registering a new masterpiece into the vault of Om Pawar.</p>
+            </div>
+            <!-- Form Section -->
+            <div class="grid grid-cols-12 gap-12">
+                <!-- Left Column: Form Details -->
+                <div class="col-span-12 lg:col-span-7 space-y-10">
+                    <section class="bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-outline-variant/5">
+                        <h3 class="font-headline text-xl text-primary mb-8 border-b border-outline-variant/10 pb-4">Artisanal Specifications</h3>
+                        <div class="space-y-8">
+                            <!-- Product Name -->
+                            <div class="group">
+                                <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 group-focus-within:text-tertiary transition-colors">Product Name</label>
+                                <input id="product-name" class="w-full bg-transparent border-0 border-b border-outline py-3 text-lg font-headline placeholder:text-on-surface-variant/30 transition-all" placeholder="e.g. Midnight Emerald Marquise" type="text"/>
+                            </div>
+                            <div class="grid grid-cols-2 gap-8">
+                                <!-- Price -->
+                                <div class="group">
+                                    <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Estimated Value (INR)</label>
+                                    <div class="relative">
+                                        <span class="absolute left-0 top-1/2 -translate-y-1/2 font-headline text-tertiary">₹</span>
+                                        <input id="product-price" class="w-full bg-transparent border-0 border-b border-outline py-3 pl-6 text-lg font-headline placeholder:text-on-surface-variant/30" placeholder="0.00" type="number"/>
+                                    </div>
+                                </div>
+                                <!-- Category -->
+                                <div class="group">
+                                    <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Collection Category</label>
+                                    <select id="product-category" class="w-full bg-transparent border-0 border-b border-outline py-3 text-sm font-medium appearance-none">
+                                        <option value="Rings">Rings</option>
+                                        <option value="Necklaces">Necklaces</option>
+                                        <option value="Earrings">Earrings</option>
+                                        <option value="Timepieces">Timepieces</option>
+                                        <option value="High Jewelry" selected="">High Jewelry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <div class="group">
+                                <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2">Provenance &amp; Description</label>
+                                <textarea id="product-description" class="w-full bg-transparent border-0 border-b border-outline py-3 text-sm font-body leading-relaxed resize-none placeholder:text-on-surface-variant/30" placeholder="Describe the cut, clarity, and historical significance..." rows="4"></textarea>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Actions -->
+                    <div class="flex items-center gap-6 pt-4">
+                        <button id="save-button" class="px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-sm tracking-widest uppercase hover:shadow-xl hover:shadow-primary/20 transition-all rounded-sm flex items-center gap-3">
+                            <span>Save to Vault</span>
+                            <span class="material-symbols-outlined text-sm">lock</span>
+                        </button>
+                        <button onclick="window.history.back()" class="px-10 py-4 border-b border-transparent hover:border-tertiary-fixed-dim text-on-surface-variant font-bold text-sm tracking-widest uppercase transition-all">
+                                Cancel
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Column: Visuals -->
+                <div class="col-span-12 lg:col-span-5 space-y-8">
+                    <section id="preview-section" class="bg-surface-container-low p-2 rounded-xl border border-outline-variant/10 aspect-[4/5] relative overflow-hidden group">
+                        <!-- Empty Preview Frame -->
+                        <div id="preview-placeholder" class="h-full w-full border-2 border-dashed border-outline-variant/30 rounded-lg flex flex-col items-center justify-center text-center p-8 bg-surface-container-lowest/50">
+                            <span class="material-symbols-outlined text-6xl text-outline-variant/50 mb-4" style="font-variation-settings: 'wght' 100;">image</span>
+                            <p class="font-headline text-on-surface-variant/50 italic mb-2">Visual Asset Preview</p>
+                            <p class="text-[10px] font-label uppercase tracking-tighter text-on-surface-variant/40">Select an image to visualize the masterpiece</p>
+                        </div>
+                        <img id="image-preview" src="" class="hidden w-full h-full object-cover rounded-lg" alt="Preview"/>
+                        <!-- Overlay for empty state decoration -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-surface-dim/20 pointer-events-none"></div>
+                    </section>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/5">
+                        <label class="block text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-4">Digital Asset Location</label>
+                        <div class="flex items-center gap-2 border-b border-outline py-2 focus-within:border-tertiary transition-colors">
+                            <span class="material-symbols-outlined text-on-surface-variant/40">link</span>
+                            <input id="product-image-url" class="flex-1 bg-transparent border-none text-xs font-body p-0 focus:ring-0" placeholder="emerald-ring.png" type="text"/>
+                        </div>
+                        <p class="mt-4 text-[11px] text-on-surface-variant/60 leading-relaxed italic">
+                                * Assets must be high-resolution and properly formatted for editorial consistency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Decorative Element -->
+        <footer class="mt-auto py-10 px-12 opacity-30 pointer-events-none">
+            <div class="flex justify-between items-end">
+                <div class="space-y-1">
+                    <div class="h-[1px] w-48 bg-outline"></div>
+                    <p class="text-[9px] font-label tracking-[0.4em] uppercase">Private Inventory Ledger</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-headline text-3xl italic">O.P.</p>
+                </div>
+            </div>
+</div>
+
+    <!-- Professional Profile Modal -->
+    <div id="profile-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-primary/40 backdrop-blur-md" onclick="closeProfileModal()"></div>
+        <div class="relative bg-surface w-full max-w-lg overflow-hidden shadow-2xl rounded-sm border border-outline-variant/20 animate-modal">
+            <!-- Modal Header / Cover -->
+            <div class="h-32 luxury-gradient relative">
+                <button onclick="closeProfileModal()" class="absolute top-4 right-4 text-on-primary hover:rotate-90 transition-transform">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <!-- Profile Info -->
+            <div class="px-10 pb-10 -mt-12 relative">
+                <div class="h-24 w-24 rounded-full border-4 border-surface overflow-hidden shadow-xl mb-6">
+                    <img src="admin-profile.jpg" class="h-full w-full object-cover" alt="Profile">
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-3xl font-headline text-primary mb-1">Estate Administrator</h3>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">The Royal Court Collection</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8 py-6 border-y border-outline-variant/10">
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest text-on-surface-variant mb-1">Professional Role</p>
+                            <p class="text-sm font-bold text-primary">Lead Curator & Vault Overseer</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest text-on-surface-variant mb-1">Boutique Tenure</p>
+                            <p class="text-sm font-bold text-primary">Since March 15, 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-tertiary-fixed-dim">verified_user</span>
+                            <p class="text-xs text-on-surface-variant leading-relaxed">
+                                Authorized for high-value asset appraisal and private estate liquidations. 
+                                <span class="block font-bold mt-1 text-primary">Security Clearance: Level 5 (Platinum Alpha)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="closeProfileModal()" class="w-full py-4 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all mt-4">
+                        Secured Portfolio Exit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4 pointer-events-none"></div>
+
+<script>
+    function showToast(message, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        
+        // Premium Toast Styling
+        toast.className = `
+            flex items-center gap-4 px-6 py-4 rounded-sm shadow-2xl translate-x-12 opacity-0 transition-all duration-500 pointer-events-auto
+            ${type === 'success' ? 'bg-primary text-on-primary border-l-4 border-tertiary-fixed-dim' : 'bg-error text-on-error'}
+        `;
+        
+        toast.innerHTML = `
+            <span class="material-symbols-outlined text-xl">
+                ${type === 'success' ? 'check_circle' : 'error'}
+            </span>
+            <span class="font-label text-xs tracking-widest uppercase font-bold">${message}</span>
+        `;
+
+        container.appendChild(toast);
+
+        // Animate In
+        requestAnimationFrame(() => {
+            toast.classList.remove('translate-x-12', 'opacity-0');
+        });
+
+        // Auto Remove
+        setTimeout(() => {
+            toast.classList.add('translate-x-12', 'opacity-0');
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
+
+    const saveButton = document.getElementById('save-button');
+    const imageInput = document.getElementById('product-image-url');
+    const imagePreview = document.getElementById('image-preview');
+    const previewPlaceholder = document.getElementById('preview-placeholder');
+
+    let previewTimeout;
+    imageInput.addEventListener('input', () => {
+        clearTimeout(previewTimeout);
+        const value = imageInput.value.trim();
+        
+        previewTimeout = setTimeout(() => {
+            if (value && value.length > 3) {
+                imagePreview.src = value;
+                imagePreview.classList.remove('hidden');
+                previewPlaceholder.classList.add('hidden');
+            } else {
+                imagePreview.classList.add('hidden');
+                previewPlaceholder.classList.remove('hidden');
+            }
+        }, 500); // Wait 500ms after typing stops
+    });
+
+    // Handle image load errors gracefully
+    imagePreview.onerror = () => {
+        imagePreview.classList.add('hidden');
+        previewPlaceholder.classList.remove('hidden');
+    };
+
+    saveButton.addEventListener('click', async () => {
+        const name = document.getElementById('product-name').value;
+        const price = parseFloat(document.getElementById('product-price').value);
+        const category = document.getElementById('product-category').value;
+        const description = document.getElementById('product-description').value;
+        const imageUrl = document.getElementById('product-image-url').value;
+
+        if (!name || isNaN(price) || !category) {
+            showToast('Masterpiece specifications incomplete.', 'error');
+            return;
+        }
+
+        // Disable button to prevent double submit
+        saveButton.disabled = true;
+        saveButton.classList.add('opacity-50', 'cursor-not-allowed');
+        
+        try {
+            const response = await fetch('http://127.0.0.1:8000/products/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    price,
+                    description,
+                    category,
+                    image_url: imageUrl
+                }),
+            });
+
+            if (response.ok) {
+                showToast('Masterpiece successfully cataloged in the vault.');
+                // Reset form
+                document.getElementById('product-name').value = '';
+                document.getElementById('product-price').value = '';
+                document.getElementById('product-category').value = 'High Jewelry';
+                document.getElementById('product-description').value = '';
+                document.getElementById('product-image-url').value = '';
+                imagePreview.classList.add('hidden');
+                previewPlaceholder.classList.remove('hidden');
+            } else {
+                const error = await response.json();
+                showToast('Vault connection error: ' + (error.detail || 'Unknown'), 'error');
+            }
+        } catch (err) {
+            console.error(err);
+            showToast('Secure bridge to vault failed. Ensure server is active.', 'error');
+        } finally {
+            saveButton.disabled = false;
+            saveButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+    });
+
+    // Profile Modal Functions
+    function openProfileModal() {
+        const modal = document.getElementById('profile-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeProfileModal() {
+        const modal = document.getElementById('profile-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Royal Court Collection - Our Heritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#faf9f8",
+              "primary": "#00321f",
+              "surface-bright": "#faf9f8",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f1f0f0",
+              "inverse-surface": "#2f3130",
+              "on-surface": "#1a1c1c",
+              "secondary-fixed-dim": "#b4ccc1",
+              "tertiary": "#3a2800",
+              "on-primary-container": "#7bba97",
+              "outline-variant": "#bfc9c1",
+              "on-secondary-fixed": "#0a1f19",
+              "error": "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#cde5da",
+              "surface-tint": "#2a6a4c",
+              "primary-fixed": "#aff1cb",
+              "on-secondary-container": "#51675f",
+              "on-background": "#1a1c1c",
+              "secondary": "#4d635b",
+              "primary-fixed-dim": "#94d4b0",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#e9c176",
+              "surface-container-high": "#e9e8e7",
+              "on-primary-fixed-variant": "#0b5136",
+              "secondary-fixed": "#d0e8dd",
+              "on-secondary-fixed-variant": "#364b43",
+              "inverse-primary": "#94d4b0",
+              "on-tertiary-container": "#cea860",
+              "surface-container": "#eeeeed",
+              "surface-container-low": "#f4f3f2",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "background": "#faf9f8",
+              "error-container": "#ffdad6",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#563d00",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#002113",
+              "on-tertiary-fixed": "#261900",
+              "surface-dim": "#dadad9",
+              "on-surface-variant": "#404943",
+              "surface-variant": "#e3e2e1",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#ffdea5",
+              "surface-container-highest": "#e3e2e1",
+              "primary-container": "#004b30",
+              "outline": "#707972"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-size: 20px;
+      }
+      .glass-effect {
+        background: rgba(250, 249, 248, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .hero-gradient {
+        background: linear-gradient(to bottom, rgba(0, 50, 31, 0.1), rgba(0, 50, 31, 0.02));
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 glass-effect border-b border-outline-variant/15 px-6 lg:px-12 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-12">
+        <a href="home.html" class="font-headline text-xl tracking-[0.2em] font-bold text-primary">THE ROYAL COURT</a>
+        <div class="hidden lg:flex items-center gap-8">
+            <a class="text-sm font-label tracking-widest text-on-surface hover:text-primary transition-colors" href="home.html">Home</a>
+            <a class="text-sm font-label tracking-widest text-on-surface hover:text-primary transition-colors" href="shop.html">Shop</a>
+            <a class="text-sm font-label tracking-widest text-primary transition-colors border-b border-tertiary-fixed-dim" href="about.html">About Us</a>
+            <a class="text-sm font-label tracking-widest text-on-surface hover:text-primary transition-colors" href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="flex items-center gap-6">
+        <button onclick="window.location.href='index.html'" class="p-2 hover:bg-surface-container-low transition-colors rounded-full">
+            <span class="material-symbols-outlined">person</span>
+        </button>
+        <button onclick="window.location.href='cart.html'" class="p-2 relative hover:bg-surface-container-low transition-colors rounded-full">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="cart-badge absolute top-1 right-1 w-4 h-4 bg-tertiary-fixed-dim text-on-tertiary text-[10px] flex items-center justify-center rounded-full hidden"></span>
+        </button>
+    </div>
+</nav>
+<main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center pt-20 pb-32 overflow-hidden hero-gradient">
+        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 z-10">
+                <span class="text-xs font-label tracking-[0.3em] uppercase text-primary mb-6 block">ESTABLISHED 1984</span>
+                <h1 class="font-headline text-5xl lg:text-7xl leading-tight text-primary mb-8 max-w-2xl">
+                    A Legacy Forged in <span class="italic">Light &amp; Time</span>
+                </h1>
+                <p class="text-on-surface-variant text-lg leading-relaxed max-w-xl mb-10">
+                    For decades, The Royal Court has curated the world's most exceptional gemstones, transforming nature's raw beauty into wearable masterpieces that define generations.
+                </p>
+                <div class="flex items-center gap-4">
+                    <button onclick="window.location.href='shop.html'" class="px-8 py-4 bg-primary text-on-primary font-label tracking-widest uppercase text-xs hover:opacity-90 transition-opacity">
+                        View the Collection
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="aspect-[4/5] bg-surface-container-low overflow-hidden shadow-2xl">
+                    <img alt="Master Craftsman" class="w-full h-full object-cover" data-alt="Close up of a master jeweler working on a ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIqYMTMeIWc4zos521hEO0ry1R2A2CZ8CPC-jvXj95YVzwqRiNxdPcPfHb2PSr8fbdxxqZNQumYjcK2tW91PY_XBRD2PHn0ikPqfKtxgl6XvT7Apt5KI5yXOMJRo_4S1KA3FODnL9Y8F9dc4XKLtb4VjK_dZ3je0QJfZx6oD5LsNzPjNVer9_yrsROMT48yTUEDv-yB8NaixOSEgosOSuwMR8_rf3kEbhcCF0mwy1ENPlworqhonaWXjA8iOs9k53WWMdlqbXIFaE"/>
+                </div>
+                <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-tertiary-fixed-dim/20 backdrop-blur-xl -z-10"></div>
+            </div>
+        </div>
+    </section>
+    <!-- The Craftsmanship Story -->
+    <section class="py-32 bg-surface-bright">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto text-center mb-24">
+                <h2 class="font-headline text-4xl text-primary mb-6">The Hand of the Artist</h2>
+                <p class="font-body text-on-surface-variant leading-relaxed text-lg">
+                    At the heart of The Royal Court lies our Atelier, where master artisans combine age-old techniques with modern precision. Every setting is meticulously sculpted by hand, ensuring that no two pieces are ever truly identical.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Bento Card 1 -->
+                <div class="lg:col-span-2 group relative overflow-hidden bg-surface-container-low aspect-[16/9]">
+                    <img alt="Workshop Details" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Jewelry workshop with traditional tools and sketches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTUr0AvvcrmOoNK1C6EagQILDYCw2Cf1d8MtrlS1PRxOwJfJzoBNWCeczbWepexLa_iIdftObuU-RipcIs3xZ9lPM7wldd87RSKZzwc1sCSic8Y-mLGS1dZd15GV1Fk25caGyoSaQ2vSPvLIYE-0J-b2ltUrGFXCXdgG8cFTMxsyJQBsUjMHDfO5fHVUHQWS_-ruCu8j3Q4ZhB07XE6AvNx_VqP93pvi8e1AGqLdsk1DLSpBDRBx480UbuvvwxK5mHe84IzoYMqrY"/>
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-8 left-8 text-on-primary">
+                        <span class="text-[10px] font-label tracking-[0.4em] uppercase mb-2 block">THE ATELIER</span>
+                        <h3 class="font-headline text-2xl">Precision in Every Stroke</h3>
+                    </div>
+                </div>
+                <!-- Bento Card 2 -->
+                <div class="bg-primary text-on-primary p-12 flex flex-col justify-between aspect-square lg:aspect-auto">
+                    <span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim">diamond</span>
+                    <div>
+                        <h3 class="font-headline text-2xl mb-4">Ethical Sourcing</h3>
+                        <p class="text-sm text-on-primary-container leading-relaxed opacity-80">
+                            We exclusively partner with mines that adhere to the highest standards of environmental responsibility and fair labor.
+                        </p>
+                    </div>
+                </div>
+                <!-- Bento Card 3 -->
+                <div class="bg-surface-container-high p-12 aspect-square lg:aspect-auto">
+                    <h3 class="font-headline text-3xl text-primary mb-6">100+</h3>
+                    <p class="text-sm font-label tracking-widest text-on-surface-variant uppercase mb-4">Hours Per Piece</p>
+                    <div class="w-12 h-[1px] bg-primary mb-8"></div>
+                    <p class="text-sm text-on-surface-variant leading-relaxed italic">
+                        "True luxury cannot be rushed. It is the result of patience, persistence, and the pursuit of perfection."
+                    </p>
+                </div>
+                <!-- Bento Card 4 -->
+                <div class="lg:col-span-2 group relative overflow-hidden bg-surface-container-low aspect-[16/9]">
+                    <img alt="Material Selection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Selection of raw diamonds and precious metals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxz0ngDFio6Kr3C0-nvoepBerQvajcZAlyAN8TW6cxRNkBN8EJoehhEwhek6Ihn9_2u5OSYuxIs6bdfXWnZ1h5clgcqC3DIeHg1U6e-vEXesE6JJ8NNnKCRxeRX_lPjdf0Az1wRs0VzJT22LuiYE2r-XBP_AdM8SRGl42ZGsRRKwuM9k6YbJU-93pF3olC6jvZ1k0arvd3tTi6mgaXwKrn9ElKJdNXl5uMTdMFkcoO4r0AIpXXiUttNIiCdTUMyKKl7TkLCJz4XY"/>
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute bottom-8 right-8 text-right text-white">
+                        <span class="text-[10px] font-label tracking-[0.4em] uppercase mb-2 block">RAW MATERIALS</span>
+                        <h3 class="font-headline text-2xl">The Foundation of Excellence</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Heritage Section -->
+    <section class="py-32 bg-surface-dim">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-20">
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <img alt="Vintage Jewelry" class="w-full shadow-lg" data-alt="Elegant vintage jewelry case with pearls and gold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIj-XTk0KIFPkGD3qHL2e9IdwYb_AmQwSwHjQXPHSNg2UBFy0l06OQmnikqqISUd4Xw5LVYZUvrXrOv1iZ-u_1uKrokunwTbr4LscELEYtsrNuakyR9sFaNXhMNVhe2V6z0jVL546F4pXnrBP_hDGEMR8q7paSLq5LKQ9n0w4rnMFfU0S366UJ9MqZMvKExDffMcANp57b8ohIQg3vKbdel33ET0C4ZSX-rUlUneC-71VD2AIEZtUQ2bFy6ifBXpF6rqgMfjTGW0A"/>
+                    <div class="absolute top-1/2 -right-12 lg:-right-20 transform -translate-y-1/2 w-48 lg:w-64 h-80 bg-surface border border-outline-variant/20 p-8 hidden md:block">
+                        <span class="text-[10px] font-label tracking-widest text-primary block mb-4">SINCE 1984</span>
+                        <p class="font-headline text-lg italic text-on-surface">"The Royal Court has defined the standard for elegance for decades."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 space-y-8">
+                <h2 class="font-headline text-4xl text-primary">A Vision of Splendor</h2>
+                <div class="space-y-6 text-on-surface-variant leading-relaxed">
+                    <p>Founded in 1984, The Royal Court began as a modest boutique specializing in hand-cut sapphires. Today, we are a name synonymous with the finest diamonds and rare metalwork.</p>
+                    <p>Our philosophy remains unchanged: to create objects of desire that transcend trends, becoming heirlooms that tell the unique stories of the families who possess them.</p>
+                </div>
+                <a class="inline-flex items-center gap-3 text-sm font-label tracking-widest uppercase text-tertiary border-b border-tertiary-fixed-dim pb-1 hover:gap-5 transition-all" href="shop.html">
+                    Discover Our Collection <span class="material-symbols-outlined">trending_flat</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- The Spec Sheet Section -->
+    <section class="py-32 bg-surface">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="border-t border-outline-variant/20 pt-20">
+                <h2 class="font-headline text-3xl text-primary mb-16">The Anatomy of Royal Quality</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16 lg:gap-x-12">
+                    <div>
+                        <span class="text-xs font-label text-tertiary-fixed-dim uppercase tracking-widest mb-4 block">CLARITY</span>
+                        <p class="text-sm leading-relaxed text-on-surface-variant">We only select stones graded VVS1 and above, ensuring a brilliance that is mathematically superior.</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-label text-tertiary-fixed-dim uppercase tracking-widest mb-4 block">METALWORK</span>
+                        <p class="text-sm leading-relaxed text-on-surface-variant">Our signature 18k Gold is an exclusive alloy designed to withstand the test of time.</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-label text-tertiary-fixed-dim uppercase tracking-widest mb-4 block">CERTIFICATION</span>
+                        <p class="text-sm leading-relaxed text-on-surface-variant">Every central gemstone is GIA certified and laser-inscribed with a unique serial for security.</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-label text-tertiary-fixed-dim uppercase tracking-widest mb-4 block">DESIGN</span>
+                        <p class="text-sm leading-relaxed text-on-surface-variant">Our designs undergo 200 hours of technical review before reaching our master craftsmen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary pt-24 pb-12">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+            <div class="lg:col-span-5">
+                <span class="font-headline text-3xl tracking-[0.2em] mb-8 block">THE ROYAL COURT</span>
+                <p class="text-on-primary-container max-w-sm text-sm leading-loose">
+                    Creating timeless treasures for those who appreciate the intersection of artistry and eternity. Visit our boutiques in London, Paris, and New York.
+                </p>
+            </div>
+            <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-label tracking-widest uppercase text-xs text-tertiary-fixed-dim mb-6">Collections</h4>
+                    <ul class="space-y-4 text-sm text-on-primary-container">
+                        <li><a class="hover:text-on-primary transition-colors" href="shop.html">High Jewelry</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Bridal</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Bespoke Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label tracking-widest uppercase text-xs text-tertiary-fixed-dim mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-on-primary-container">
+                        <li><a class="hover:text-on-primary transition-colors" href="about.html">Our Story</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Heritage</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label tracking-widest uppercase text-xs text-tertiary-fixed-dim mb-6">Support</h4>
+                    <ul class="space-y-4 text-sm text-on-primary-container">
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">FAQ</a></li>
+                        <li><a class="hover:text-on-primary transition-colors" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-on-primary-fixed-variant/30 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-xs text-on-primary-container opacity-60 font-label tracking-widest uppercase">
+                © 2024 The Royal Court Collection. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a class="text-xs text-on-primary-container opacity-60 hover:opacity-100 uppercase tracking-widest" href="#">Privacy Policy</a>
+                <a class="text-xs text-on-primary-container opacity-60 hover:opacity-100 uppercase tracking-widest" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="cart-util.js"></script>
+</body>
+</html>

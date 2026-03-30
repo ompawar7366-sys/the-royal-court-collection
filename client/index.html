@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Royal Court Collection - Client Access</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#faf9f8",
+                        "primary": "#00321f",
+                        "surface-bright": "#faf9f8",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f0f0",
+                        "inverse-surface": "#2f3130",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed-dim": "#b4ccc1",
+                        "tertiary": "#3a2800",
+                        "on-primary-container": "#7bba97",
+                        "outline-variant": "#bfc9c1",
+                        "on-secondary-fixed": "#0a1f19",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cde5da",
+                        "surface-tint": "#2a6a4c",
+                        "primary-fixed": "#aff1cb",
+                        "on-secondary-container": "#51675f",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#4d635b",
+                        "primary-fixed-dim": "#94d4b0",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "surface-container-high": "#e9e8e7",
+                        "on-primary-fixed-variant": "#0b5136",
+                        "secondary-fixed": "#d0e8dd",
+                        "on-secondary-fixed-variant": "#364b43",
+                        "inverse-primary": "#94d4b0",
+                        "on-tertiary-container": "#cea860",
+                        "surface-container": "#eeeeed",
+                        "surface-container-low": "#f4f3f2",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "background": "#faf9f8",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#563d00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#002113",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-dim": "#dadad9",
+                        "on-surface-variant": "#404943",
+                        "surface-variant": "#e3e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-container-highest": "#e3e2e1",
+                        "primary-container": "#004b30",
+                        "outline": "#707972"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+        }
+
+        .bg-login-hero {
+            background-image: linear-gradient(rgba(0, 50, 31, 0.5), rgba(0, 50, 31, 0.7)), url('bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom scrollbar for an elegant feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #faf9f8;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b4ccc1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4d635b;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-tertiary-fixed-dim selection:text-tertiary">
+    <main class="min-h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden">
+
+        <!-- Left Banner / Image Section -->
+        <aside class="hidden lg:flex lg:col-span-7 bg-login-hero relative flex-col justify-between p-16 shadow-2xl z-10"
+            data-alt="High-end diamond jewelry displayed on velvet">
+            <div class="animate-[fadeIn_1s_ease-out]">
+                <h1
+                    class="font-headline text-on-primary text-5xl xl:text-6xl tracking-tight leading-tight drop-shadow-lg">
+                    THE ROYAL COURT</h1>
+                <p
+                    class="text-on-primary-container font-label text-sm xl:text-base tracking-[0.2em] mt-4 uppercase drop-shadow-md">
+                    Exclusive Collection &amp; Vault Access</p>
+            </div>
+
+            <div class="max-w-md animate-[fadeIn_1.5s_ease-out]">
+                <blockquote
+                    class="text-on-primary font-headline text-3xl italic leading-relaxed font-light drop-shadow-md">
+                    "Crafted for the moments that define a lifetime."
+                </blockquote>
+                <div class="mt-10 flex items-center gap-4">
+                    <div class="h-[1px] w-16 bg-tertiary-fixed-dim/80 shadow-[0_0_10px_rgba(233,193,118,0.5)]"></div>
+                    <span
+                        class="text-tertiary-fixed-dim font-label text-xs uppercase tracking-[0.3em] font-semibold">Est.
+                        1984</span>
+                </div>
+            </div>
+
+            <!-- Subtle overlay gradient for depth -->
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent pointer-events-none mix-blend-multiply">
+            </div>
+        </aside>
+
+        <!-- Right Login Section -->
+        <section
+            class="col-span-1 lg:col-span-5 flex flex-col justify-center px-8 sm:px-16 lg:px-24 py-20 bg-surface-bright relative z-20">
+            <div class="mb-12 animate-[slideUp_0.8s_ease-out]">
+                <h2 class="font-headline text-primary text-4xl mb-4 text-primary">Welcome Back</h2>
+                <p class="text-on-surface-variant font-body text-md leading-relaxed">Access your private collection,
+                    exclusive auctions, and personal curated selections.</p>
+            </div>
+
+            <form class="space-y-8 animate-[slideUp_1s_ease-out]" onsubmit="event.preventDefault();">
+                <div class="space-y-8">
+                    <!-- Email Input -->
+                    <div class="relative group">
+                        <label
+                            class="block text-[11px] font-label uppercase tracking-widest text-outline mb-2 transition-colors group-focus-within:text-tertiary"
+                            for="email">Email Address</label>
+                        <input
+                            class="w-full bg-transparent border-0 border-b border-outline py-3 px-1 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all duration-300 placeholder:text-surface-dim/70 text-on-surface"
+                            id="email" name="email" placeholder="name@theroyalcourt.com" type="email" required />
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="relative group">
+                        <label
+                            class="block text-[11px] font-label uppercase tracking-widest text-outline mb-2 transition-colors group-focus-within:text-tertiary"
+                            for="password">Password</label>
+                        <div class="relative">
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline py-3 px-1 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all duration-300 placeholder:text-surface-dim/70 text-on-surface pr-10"
+                                id="password" name="password" placeholder="••••••••" type="password" required />
+                            <button
+                                class="absolute right-2 top-1/2 -translate-y-1/2 text-outline hover:text-tertiary transition-colors focus:outline-none p-1 rounded-full hover:bg-surface-variant/50"
+                                type="button" onclick="togglePassword()" aria-label="Toggle password visibility">
+                                <span class="material-symbols-outlined text-lg" id="toggle-icon">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                    <div class="flex items-center gap-3 cursor-pointer group">
+                        <div class="relative flex items-center">
+                            <input
+                                class="w-4 h-4 border-outline text-tertiary focus:ring-tertiary focus:ring-offset-surface-bright transition-colors cursor-pointer rounded-sm"
+                                id="remember" type="checkbox" />
+                        </div>
+                        <label
+                            class="text-sm font-body text-on-surface-variant group-hover:text-on-surface cursor-pointer transition-colors"
+                            for="remember">Remember me</label>
+                    </div>
+                    <a class="text-sm font-label text-tertiary-fixed-dim hover:text-tertiary transition-all duration-300 underline decoration-1 underline-offset-4 decoration-tertiary-fixed-dim/30 hover:decoration-tertiary"
+                        href="#">Forgot password?</a>
+                </div>
+
+                <button onclick="window.location.href='home.html'"
+                    class="w-full relative overflow-hidden bg-primary py-4 text-on-primary font-label text-sm uppercase tracking-widest transition-all duration-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 group rounded-sm"
+                    type="button">
+                    <span
+                        class="absolute inset-0 bg-primary-container transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0"></span>
+                    <span class="relative flex items-center justify-center gap-3">
+                        Enter Vault
+                        <span
+                            class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                    </span>
+                </button>
+            </form>
+
+            <div
+                class="mt-14 pt-8 border-t border-surface-variant/50 flex flex-col items-center gap-6 animate-[slideUp_1.2s_ease-out]">
+                <p class="text-on-surface-variant text-sm font-light">Don't have an account yet?</p>
+                <button onclick="window.location.href='signup.html'" class="inline-block px-12 py-3.5 border border-outline text-primary font-label text-xs uppercase tracking-widest hover:bg-surface-container-low hover:border-primary hover:text-primary transition-all duration-300 rounded-sm" type="button">
+                    Request Membership
+                </button>
+            </div>
+
+            <footer class="mt-auto pt-16 text-center lg:text-left animate-[fadeIn_1.5s_ease-out]">
+                <p class="text-[10px] text-outline uppercase tracking-widest font-label">© 2024 The Royal Court
+                    Collection. All rights reserved.</p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+                    <a class="text-[10px] text-outline hover:text-primary tracking-widest uppercase transition-colors"
+                        href="#">Privacy Policy</a>
+                    <a class="text-[10px] text-outline hover:text-primary tracking-widest uppercase transition-colors"
+                        href="#">Terms of Service</a>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Decorative Background Element -->
+        <div class="fixed top-[-5%] right-[-5%] z-0 pointer-events-none opacity-[0.03] hidden xl:block rotate-[15deg]">
+            <span class="material-symbols-outlined text-[400px] text-primary"
+                style="font-variation-settings: 'FILL' 0;">diamond</span>
+        </div>
+    </main>
+
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('password');
+            const icon = document.getElementById('toggle-icon');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.textContent = 'visibility_off';
+                icon.classList.add('text-tertiary');
+            } else {
+                input.type = 'password';
+                icon.textContent = 'visibility';
+                icon.classList.remove('text-tertiary');
+            }
+        }
+    </script>
+</body>
+
+</html>

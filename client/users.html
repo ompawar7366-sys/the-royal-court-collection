@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THE ROYAL COURT Admin | Client Relations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "surface": "#faf9f8",
+                  "primary": "#00321f",
+                  "surface-bright": "#faf9f8",
+                  "on-error": "#ffffff",
+                  "inverse-on-surface": "#f1f0f0",
+                  "inverse-surface": "#2f3130",
+                  "on-surface": "#1a1c1c",
+                  "secondary-fixed-dim": "#b4ccc1",
+                  "tertiary": "#3a2800",
+                  "on-primary-container": "#7bba97",
+                  "outline-variant": "#bfc9c1",
+                  "on-secondary-fixed": "#0a1f19",
+                  "error": "#ba1a1a",
+                  "on-secondary": "#ffffff",
+                  "secondary-container": "#cde5da",
+                  "surface-tint": "#2a6a4c",
+                  "primary-fixed": "#aff1cb",
+                  "on-secondary-container": "#51675f",
+                  "on-background": "#1a1c1c",
+                  "secondary": "#4d635b",
+                  "primary-fixed-dim": "#94d4b0",
+                  "on-tertiary": "#ffffff",
+                  "tertiary-fixed-dim": "#e9c176",
+                  "surface-container-high": "#e9e8e7",
+                  "on-primary-fixed-variant": "#0b5136",
+                  "secondary-fixed": "#d0e8dd",
+                  "on-secondary-fixed-variant": "#364b43",
+                  "inverse-primary": "#94d4b0",
+                  "on-tertiary-container": "#cea860",
+                  "surface-container": "#eeeeed",
+                  "surface-container-low": "#f4f3f2",
+                  "on-tertiary-fixed-variant": "#5d4201",
+                  "background": "#faf9f8",
+                  "error-container": "#ffdad6",
+                  "on-primary": "#ffffff",
+                  "tertiary-container": "#563d00",
+                  "on-error-container": "#93000a",
+                  "on-primary-fixed": "#002113",
+                  "on-tertiary-fixed": "#261900",
+                  "surface-dim": "#dadad9",
+                  "on-surface-variant": "#404943",
+                  "surface-variant": "#e3e2e1",
+                  "surface-container-lowest": "#ffffff",
+                  "tertiary-fixed": "#ffdea5",
+                  "surface-container-highest": "#e3e2e1",
+                  "primary-container": "#004b30",
+                  "outline": "#707972"
+                },
+                fontFamily: {
+                  "headline": ["Noto Serif"],
+                  "body": ["Manrope"],
+                  "label": ["Manrope"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+        </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #bfc9c1; border-radius: 10px; }
+        
+        .modal-overlay {
+            background: rgba(0, 50, 31, 0.4);
+            backdrop-filter: blur(8px);
+        }
+        .luxury-gradient {
+            background: radial-gradient(circle at center, #004b30 0%, #00321f 100%);
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal {
+            animation: modalFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+    <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/15 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-8">
+            <span class="text-xl font-headline tracking-widest text-primary">THE ROYAL COURT</span>
+            <div class="hidden md:flex gap-6">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="shop.html">Shop</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="relative hidden sm:block">
+                <input class="bg-surface-container-low border-none focus:ring-1 focus:ring-primary text-sm pl-10 pr-4 py-2 w-64 rounded-lg" placeholder="Search users..." type="text"/>
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+            </div>
+            <button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+                <span class="material-symbols-outlined">person</span>
+            </button>
+            <button class="p-2 hover:bg-surface-container rounded-full transition-colors relative">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <span class="absolute top-1 right-1 w-2 h-2 bg-tertiary-fixed-dim rounded-full"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="flex min-h-[calc(100vh-73px)]">
+        <!-- Side Navigation Bar -->
+        <aside class="w-64 border-r border-outline-variant/15 bg-surface-container-lowest hidden lg:flex flex-col">
+            <div class="p-8">
+                <div onclick="openProfileModal()" class="flex items-center gap-3 mb-1 cursor-pointer hover:bg-surface-container-low p-2 rounded-lg transition-all group">
+                    <img class="w-10 h-10 rounded-full object-cover group-hover:ring-2 group-hover:ring-tertiary-fixed-dim transition-all" data-alt="Admin User Avatar" src="admin-profile.jpg"/>
+                    <div>
+                        <p class="text-sm font-bold leading-tight group-hover:text-primary transition-colors">Admin Portal</p>
+                        <p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Management Suite</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-2">
+                <a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-primary rounded-lg" href="#">
+                    <span class="material-symbols-outlined text-xl">dashboard</span>
+                    <span class="text-sm font-bold">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all rounded-lg" href="admin.html">
+                    <span class="material-symbols-outlined text-xl">diamond</span>
+                    <span class="text-sm font-medium">Inventory</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all rounded-lg" href="#">
+                    <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">group</span>
+                    <span class="text-sm font-medium">User Data</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all rounded-lg" href="#">
+                    <span class="material-symbols-outlined text-xl">settings</span>
+                    <span class="text-sm font-medium">Settings</span>
+                </a>
+            </nav>
+            <div class="p-8">
+                <div class="bg-primary p-6 rounded-lg relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="text-on-primary text-[10px] uppercase tracking-widest opacity-70 mb-2">Vault Status</p>
+                        <p class="text-tertiary-fixed-dim text-lg font-headline">Secure Access</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10">
+                        <span class="material-symbols-outlined text-6xl text-on-primary">shield</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 bg-surface-bright p-6 lg:p-12 overflow-x-hidden">
+            <!-- Header Section -->
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-headline text-primary mb-4">Client Relations</h1>
+                    <p class="text-on-surface-variant max-w-lg leading-relaxed">Secure management of The Royal Court's global clientele. Oversee account status, luxury purchase history, and tier management.</p>
+                </div>
+                <div class="flex gap-3">
+                    <button class="px-6 py-2 border border-outline text-xs font-bold uppercase tracking-widest hover:bg-surface-container transition-colors">Export CSV</button>
+                    <button id="add-user-btn" class="px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary text-xs font-bold uppercase tracking-widest hover:shadow-lg transition-all">Add New User</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-surface-container-low p-6 flex flex-col justify-between min-h-[140px]">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant">Total Members</span>
+                    <div>
+                        <p id="stat-total-members" class="text-3xl font-headline text-primary">...</p>
+                        <p class="text-xs text-on-primary-container font-medium flex items-center gap-1 mt-1">
+                            <span class="material-symbols-outlined text-sm">trending_up</span> +4.2% this month
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-6 flex flex-col justify-between min-h-[140px]">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant">Active Collections</span>
+                    <div>
+                        <p class="text-3xl font-headline text-primary">843</p>
+                        <p class="text-xs text-on-surface-variant mt-1">Unique purchase profiles</p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-6 flex flex-col justify-between min-h-[140px]">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant">Avg. Order Value</span>
+                    <div>
+                        <p class="text-3xl font-headline text-primary">₹4,00,000</p>
+                        <p class="text-xs text-tertiary-fixed-dim font-bold mt-1">Premium Tier Average</p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-low p-6 flex flex-col justify-between min-h-[140px]">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant">Support Tickets</span>
+                    <div>
+                        <p class="text-3xl font-headline text-primary">12</p>
+                        <p class="text-xs text-error font-medium mt-1">Requires attention</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Data Table Area -->
+            <div class="bg-surface-container-lowest overflow-hidden border border-outline-variant/15">
+                <div class="px-8 py-6 flex items-center justify-between border-b border-outline-variant/15">
+                    <h2 class="text-xl font-headline italic">Registered Client Directory</h2>
+                </div>
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-surface-container-low/50">
+                                <th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Client Details</th>
+                                <th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Tier &amp; Status</th>
+                                <th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Role</th>
+                                <th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Entry ID</th>
+                                <th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-table-body" class="divide-y divide-outline-variant/10">
+                            <!-- Dynamic Content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Professional Profile Modal -->
+    <div id="profile-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-primary/40 backdrop-blur-md" onclick="closeProfileModal()"></div>
+        <div class="relative bg-surface w-full max-w-lg overflow-hidden shadow-2xl rounded-sm border border-outline-variant/20 animate-modal">
+            <!-- Modal Header / Cover -->
+            <div class="h-32 luxury-gradient relative" style="background: radial-gradient(circle at center, #004b30 0%, #00321f 100%);">
+                <button onclick="closeProfileModal()" class="absolute top-4 right-4 text-on-primary hover:rotate-90 transition-transform">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <!-- Profile Info -->
+            <div class="px-10 pb-10 -mt-12 relative">
+                <div class="h-24 w-24 rounded-full border-4 border-surface overflow-hidden shadow-xl mb-6">
+                    <img src="admin-profile.jpg" class="h-full w-full object-cover" alt="Profile">
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-3xl font-headline text-primary mb-1" style="font-family: 'Noto Serif', serif;">Estate Administrator</h3>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">The Royal Court Collection</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8 py-6 border-y border-outline-variant/10">
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest text-on-surface-variant mb-1">Professional Role</p>
+                            <p class="text-sm font-bold text-primary">Lead Curator & Vault Overseer</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest text-on-surface-variant mb-1">Boutique Tenure</p>
+                            <p class="text-sm font-bold text-primary">Since March 15, 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-tertiary-fixed-dim">verified_user</span>
+                            <p class="text-xs text-on-surface-variant leading-relaxed">
+                                Authorized for high-value asset appraisal and private estate liquidations. 
+                                <span class="block font-bold mt-1 text-primary">Security Clearance: Level 5 (Platinum Alpha)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="closeProfileModal()" class="w-full py-4 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all mt-4">
+                        Secured Portfolio Exit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Creation Modal -->
+    <div id="user-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 modal-overlay" id="modal-close"></div>
+        <div class="relative bg-surface w-full max-w-lg p-10 shadow-2xl rounded-sm border border-outline-variant/20 animate-in fade-in zoom-in duration-300">
+            <h3 class="text-2xl font-headline text-primary mb-2">New Client Registration</h3>
+            <p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-8 font-bold">Administrative Data Entry</p>
+            
+            <form id="add-user-form" class="space-y-6">
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2">Email Identity</label>
+                    <input type="email" id="user-email" required class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all py-3 font-headline text-lg" placeholder="collector@heritage.com">
+                </div>
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2">Access Code</label>
+                    <input type="password" id="user-password" required class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all py-3 font-headline text-lg" placeholder="••••••••">
+                </div>
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-2">Registry Tier</label>
+                    <select id="user-role" class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all py-3 font-bold text-xs uppercase tracking-widest">
+                        <option value="user">Private Collector</option>
+                        <option value="admin">Estate Administrator</option>
+                    </select>
+                </div>
+                <div class="flex gap-4 pt-4">
+                    <button type="button" id="cancel-modal" class="flex-1 py-4 border border-outline text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-surface-container transition-all">Cease Operation</button>
+                    <button type="submit" class="flex-1 py-4 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-[0.2em] hover:shadow-xl transition-all">Submit to Registry</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4 pointer-events-none"></div>
+
+    <script>
+        const API_BASE = "http://127.0.0.1:8000";
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `flex items-center gap-4 px-6 py-4 rounded-sm shadow-2xl translate-x-12 opacity-0 transition-all duration-500 pointer-events-auto ${type === 'success' ? 'bg-primary text-on-primary border-l-4 border-tertiary-fixed-dim' : 'bg-error text-on-error'}`;
+            toast.innerHTML = `<span class="material-symbols-outlined text-xl">${type === 'success' ? 'check_circle' : 'error'}</span><span class="font-label text-xs tracking-widest uppercase font-bold">${message}</span>`;
+            container.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.remove('translate-x-12', 'opacity-0'));
+            setTimeout(() => {
+                toast.classList.add('translate-x-12', 'opacity-0');
+                setTimeout(() => toast.remove(), 500);
+            }, 5000);
+        }
+
+        const fetchUsers = async () => {
+            try {
+                const response = await fetch(`${API_BASE}/admin/users/`);
+                if (!response.ok) throw new Error('Registry search failed');
+                
+                const users = await response.json();
+                renderUsers(users);
+                updateStats(users.length);
+            } catch (err) {
+                showToast(err.message, 'error');
+            }
+        };
+
+        const renderUsers = (users) => {
+            const tbody = document.getElementById('user-table-body');
+            tbody.innerHTML = users.map(user => `
+                <tr class="hover:bg-surface-container-low/30 transition-colors">
+                    <td class="px-8 py-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold">
+                                ${user.email.substring(0, 2).toUpperCase()}
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold">${user.email.split('@')[0]}</p>
+                                <p class="text-xs text-on-surface-variant">${user.email}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-6">
+                        <div class="flex flex-col gap-1">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-tighter ${user.role === 'admin' ? 'bg-tertiary-fixed text-on-tertiary-fixed' : 'bg-secondary-container text-on-secondary-container'} w-fit">
+                                ${user.role === 'admin' ? 'Platinum Elite' : 'Gold Member'}
+                            </span>
+                            <span class="flex items-center gap-1 text-[10px] text-on-primary-fixed-variant">
+                                <span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span> Verified
+                            </span>
+                        </div>
+                    </td>
+                    <td class="px-8 py-6">
+                        <span class="text-xs font-medium uppercase tracking-widest opacity-60">${user.role}</span>
+                    </td>
+                    <td class="px-8 py-6 font-bold text-sm tracking-tighter opacity-70">#RL-${String(user.id).padStart(4, '0')}</td>
+                    <td class="px-8 py-6 text-right">
+                        <button class="p-2 hover:bg-surface-variant rounded-lg transition-colors">
+                            <span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        };
+
+        const updateStats = (count) => {
+            document.getElementById('stat-total-members').textContent = count.toLocaleString();
+        };
+
+        // Modal Logic
+        const modal = document.getElementById('user-modal');
+        document.getElementById('add-user-btn').onclick = () => modal.classList.replace('hidden', 'flex');
+        document.getElementById('modal-close').onclick = () => modal.classList.replace('flex', 'hidden');
+        document.getElementById('cancel-modal').onclick = () => modal.classList.replace('flex', 'hidden');
+
+        // Form Logic
+        document.getElementById('add-user-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('user-email').value;
+            const password = document.getElementById('user-password').value;
+            const role = document.getElementById('user-role').value;
+
+            try {
+                const response = await fetch(`${API_BASE}/auth/signup`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password, role })
+                });
+
+                if (response.ok) {
+                    showToast('Client Registered Successfully');
+                    modal.classList.replace('flex', 'hidden');
+                    e.target.reset();
+                    fetchUsers();
+                } else {
+                    const err = await response.json();
+                    showToast(err.detail || 'Registration Failed', 'error');
+                }
+            } catch (err) {
+                showToast('Vault connection failed', 'error');
+            }
+        });
+
+        // Initialize
+        fetchUsers();
+
+        // Profile Modal Functions
+        function openProfileModal() {
+            const modal = document.getElementById('profile-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProfileModal() {
+            const modal = document.getElementById('profile-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
